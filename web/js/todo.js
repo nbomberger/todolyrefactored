@@ -56,8 +56,8 @@ $(document).ready(function(){
 
     // Set up an object with our App id and API key
     var init_vals = {
-      appid: '84e5c4a381e7424b8df62e055f0b69db',
-      apikey: '84c8c3f1223b4710b180d181cd6fb1df'
+      appid: 'ec2c161f7a4b485981230a7b0a28f3fe',
+      apikey: 'e1767a2e93824f219d75969ee64cbff1'
     }
 
     // Perform the check for the session cookie
@@ -501,7 +501,7 @@ $(document).ready(function(){
     $(this.button).click(function(){
       self.select();
     }).css({
-      'background-image': 'url("priority_' + value + '.png")'
+      'background-image': 'url("../img/priority_' + value + '.png")'
     });
     return this
   }

@@ -157,7 +157,7 @@ input:-moz-placeholder{
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url('close_button.png');
+  background: url('../img/close_button.png');
   cursor: pointer;
   margin: 0px 2px 0px 10px;
 }
