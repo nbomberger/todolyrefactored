@@ -1,60 +1,32 @@
-### Todoly Refactored - Add network caching using CoreData 
+#### Installation
 
-#### Overview
+There are two components you will need to install in order to test this application.  There is a web component, [Todoly][todolyportal] and the [iOS application][todolyios].  
 
-We recently needed to build an application that could synchronize data across a website and multiple mobile devices.  This is a pretty common situation for any one working with any technolgies using any part of the web stack.  There is nothing fancy in this post, but demonstrates a simple roll-your-own caching solution utilizing a cloud service backend. Our focus is on the mobile side.  
-
-The goal of this post is to discuss a method to add the ability to cache network queries using the [CloudMine iOS SDK][CloudMineIoslibrary].  Adding this capability will allow us to continue to allow the application to function when we don't have access to the network.  [CloudMine][CloudMine] is a backend-as-service platform that provides easy access to the cloud.  Our application will really just be a refactor of an application built by the engineers at [CloudMine][CloudMine], [Todoly][todolyportal]. According to [CloudMine][CloudMine], [Todoly][CloudMineIoslibrary] is: 
-
->    *A simple application that demonstrates CloudMine's user authentication and object storage APIs. It displays a simple, per-user todo list, and just happens to sync with this [JavaScript sample application][todolyportal].*
-
-
-By bridging the storage capability inherant in CloudMine and CoreData, we add flexibility to the application which could allow for alternative storage solutions if warranted, and allow the user to continue use the application even when access to the cloud is not possible.
-
-##### iOS component
-Below is a list of the technologies we used to refactor the application in the simulator or device.  You will need to have a CloudMine account, as well as an Apple Developer account in order to run this provided [demo source code][todolyrefactoredsource].  
-* [Xcode 4.5][xcode4.5] - IDE for iOS development.
-* [CloudCloudMine Javascript Library][CloudMineJavascriptLibrary] - backend-as-a-service Javascript API Library.
-* [CloudMine iOS SDK][CloudMineIoslibrary] - iOS backend-as-a-service SDK.
-* [MagicRecord][MagicRecord] - Helper classes to facilitate using CoreData on iOS.
-* [Reachability.h][Reachability.h] - Apple provided classes to assist in detecting network status on iOS device.
+###### CloudMine Setup
+1. Sign in to [CloudMine Dashboard][CloudMineDashboard].
+2. Click on `My Apps`.
+3. Enter `TodolyRefactored`.
+4. Save `Application ID` somewhere save.  This identifies your application with [CloudMine][CloudMine].
+<!-- ec2c161f7a4b485981230a7b0a28f3fe -->
 
 
-##### Web Component 
-[CloudMine][CloudMine] also provides the web client source code which can be downloaded [here][todolyportal].
+###### Download Dependencies
+1.  Download [source for web component][todolyportal].  In Chrome, you can do this by right-clicking on the page, opening up the inspector, and downloading the files listed in the `Source` tab.
 
-     <link rel="stylesheet" type="text/css" href="http://css.anbmedia.com/global20.css?u=2012-11-05_15-25-00" />
 
-     <script>
-     (function() {
-       function async_load(){
-         var timetoplay_id = '3906';
-         var s = document.createElement('script');
-         s.type = 'text/javascript';
-         s.async = true;
-         s.src = 'http://timetoplay.herokuapp.com/products/' + timetoplay_id + '/widget.js';
-         var x = document.getElementsByTagName('script')[0];
-         x.parentNode.insertBefore(s, x);
-       }
-       if (window.attachEvent)
-         window.attachEvent('onload', async_load);
-       else
-         window.addEventListener('load', async_load, false);
-     })();
+###### Setting up Test Environment
 
-<!-- Embed html or javascript using the below -->
-</script>
-<center>
 
-<div id="price-widget"></div>
-</center>
 
- <!-- Links to images, hyperlinks should go here -->
+<!-- Links -->
+
+ [todolyios]: https://github.com/cloudmine/cloudmine-ios-sample-todo 
+ [CloudMineDashboard]: https://cloudmine.me/dashboard 
  [CloudMine]: http://www.cloudmine.me
  [CloudMineIoslibrary]: https://cloudmine.me/docs/ios
  [CloudMineJavascriptLibrary]: https://cloudmine.me/docs/js
  [todolyportal]: https://cloudmine.me/sample-apps/todo/index.html 
- [todolyrefactoredsource]: http://github.com/nbomberger/todolyrefactored
+ [todolyrefactoredsource]: http://github.com
  [Arcweb]: http://www.arcwebl.co
   <!-- Tool links -->
  [xcode4.5]: http://developer.apple.com/xcode
