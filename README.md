@@ -22,15 +22,17 @@ There are two components you will need to install in order to test this applicat
 		
 		$ cd todolyrefactored/web
 
-3.  Start the up a local web server:	
+3.  Edit `appid` and `apikey` to match your CloudMine credentials.
+
+4.  Start the up a local web server:	
 	
 		$ python -m SimpleHTTPServer & 
 
-4.  Open `index.html` in a browser:  
+5.  Open `index.html` in a browser:  
 
 		$ open index.html
 
-5.  Profit!
+6.  Profit!
 		
 
 ###### Setting up Test Environment
