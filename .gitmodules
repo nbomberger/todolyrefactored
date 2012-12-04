@@ -1,0 +1,3 @@
+[submodule "cloudmine-ios-sample-todo"]
+	path = cloudmine-ios-sample-todo
+	url = https://github.com/nbomberger/cloudmine-ios-sample-todo.git

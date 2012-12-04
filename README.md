@@ -1,6 +1,3 @@
-Todoly Refactored
-=================
-
 ### Todoly Refactored - Add network caching using CoreData 
 
 #### Overview
@@ -26,7 +23,25 @@ Below is a list of the technologies we used to refactor the application in the s
 ##### Web Component 
 [CloudMine][CloudMine] also provides the web client source code which can be downloaded [here][todolyportal].
 
-    
+     <link rel="stylesheet" type="text/css" href="http://css.anbmedia.com/global20.css?u=2012-11-05_15-25-00" />
+
+     <script>
+     (function() {
+       function async_load(){
+         var timetoplay_id = '3906';
+         var s = document.createElement('script');
+         s.type = 'text/javascript';
+         s.async = true;
+         s.src = 'http://timetoplay.herokuapp.com/products/' + timetoplay_id + '/widget.js';
+         var x = document.getElementsByTagName('script')[0];
+         x.parentNode.insertBefore(s, x);
+       }
+       if (window.attachEvent)
+         window.attachEvent('onload', async_load);
+       else
+         window.addEventListener('load', async_load, false);
+     })();
+
 <!-- Embed html or javascript using the below -->
 </script>
 <center>
