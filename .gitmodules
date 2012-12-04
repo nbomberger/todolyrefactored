@@ -1,6 +1,8 @@
 [submodule "cloudmine-ios-sample-todo"]
 	path = cloudmine-ios-sample-todo
 	url = https://github.com/nbomberger/cloudmine-ios-sample-todo.git
+	ignore = dirty
 [submodule "PullToRefresh"]
 	path = PullToRefresh
 	url = https://github.com/dhoerl/PullToRefresh.git
+	ignore = dirty
